@@ -1,25 +1,32 @@
-var nameOfChild=prompt("What is your name ??");
-
-alert("HI "+nameOfChild+":D");
-alert("Let's learn the numbers");
-
-var favoriteFruit =prompt("What more do you prefer, apple or banana??");
-while(favoriteFruit !='apple' && favoriteFruit !='banana'){
-    favoriteFruit =prompt("Wrong entry .. What more do you prefer, apple or banana??");
+function helloFun(){
+    alert("Hello");
 }
-var itemFruit=' ';
-if (favoriteFruit=="apple"){
-    itemFruit='<img src="apple.png" width="200" height="200"/>';
-}else{
-    itemFruit='<img src="banana.png" width="200" height="200"/>';
+ var numOfDays=0;
+function days(){
+     numOfDays=prompt("How many days do you want?  ");
+    if (numOfDays>0){
+        return numOfDays;
+    }else{
+        numOfDays=prompt("please enter again ..How many days do you want?  ");
+    }
+}
+function theCost(days){
+    alert("the total will be "+ 70*numOfDays+"JD :D");
 }
 
-var numberOfFruit=prompt("enter a number");
-var result=' ';
 
-     for(var i=0;i<numberOfFruit; i++){
-        result=result+itemFruit;
-     }
-     document.write(result);
+
+helloFun();
+alert("Because of Corona, there are flights within Jordan only")
+var distination =prompt("where do you wanna go ? aqaba or deadsea? ");
+
+while(distination !='aqaba' && distination !='deadsea'){
+
+    distination =prompt("Wrong entry ..where do you wanna go ? aqaba or deadsea?");
+}
+
+days();
+theCost();
+
 
 
